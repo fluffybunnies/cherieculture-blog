@@ -1,0 +1,22 @@
+{
+	"name": "cherieculture-blog",
+	"version": "0.0.0",
+	"description": "Simple WP for Cherie Culture",
+	"keywords": [
+	],
+	"author": "fluffybunnies",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:fluffybunnies/cherieculture-blog.git"
+	},
+	"homepage": "https://github.com/fluffybunnies/cherieculture-blog",
+	"bugs": {
+		"url": "https://github.com/fluffybunnies/cherieculture-blog/issues"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+	},
+	"scripts": {
+	}
+}
