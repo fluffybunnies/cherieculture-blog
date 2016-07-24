@@ -6,4 +6,5 @@ npm-debug.log*
 Thumbs.db
 config.local.json
 web/config.local.php
+.htaccess
 !.g
