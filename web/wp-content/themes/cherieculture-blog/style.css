@@ -893,9 +893,6 @@ object {
 	display: block;
 }
 
-
-/** BEGIN custom cherieculture styles **/
-
-
-/** END custom cherieculture styles **/
+@import 'css/foundation.min.css';
+@import 'css/main.css';
 
