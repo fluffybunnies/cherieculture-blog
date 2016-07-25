@@ -2,7 +2,7 @@
 $posts = wp_get_recent_posts(array(
 	'numberposts' => 1,
 ));
-if ($posts[0]): ?>
+if (isset($posts[0])): ?>
 
 <div class="top-stories">
 	<div class="top-stories-header">
