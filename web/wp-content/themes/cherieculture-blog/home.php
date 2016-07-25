@@ -24,15 +24,18 @@ get_header(); ?>
 				<div class="home-stories-header">
 					<div class="smhead-title smhead-title-lateststories">Latest Stories</div>
 				</div>
-				<div class="home-stories-posts">
+				<div class="home-stories-posts columns">
 					<?php foreach ($posts as $post): ?>
-						<div class="home-stories-post"><a class="nostyle" href="<?php echo $post['guid']; ?>">
-							<img class="home-stories-post-image" src="/wp-content/themes/cherieculture-blog/images/SAMPLE-article-thumb-0.jpg" alt="" />
+						<div class="home-stories-post column small-12 medium-6 large-4"><div class="home-stories-post-inner">
+							<img class="home-stories-post-image" src="/wp-content/themes/cherieculture-blog/images/blank-367x357.gif" style="background-image:url(/wp-content/themes/cherieculture-blog/images/SAMPLE-article-thumb-0.jpg)" alt="" />
 							<div class="home-stories-post-timestamp"><?php echo \ace\Ace::date('M d, Y',\ace\Ace::strToTimeUTC($post['post_date_gmt'])); ?></div>
 							<h3 class="home-stories-post-title"><?php echo $post['post_title']; ?></h3>
-						</a></div>
+							<a class="link-overlay" href="<?php echo $post['guid']; ?>"></a>
+						</div></div>
 					<?php endforeach; ?>
+					<div class="clear">&nbsp;</div>
 				</div>
+				<div class="clear">&nbsp;</div>
 			</div>
 
 			<?php endif; ?>

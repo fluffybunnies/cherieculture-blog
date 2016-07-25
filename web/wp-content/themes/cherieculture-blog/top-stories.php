@@ -11,11 +11,12 @@ if (isset($posts[0])): ?>
 	</div>
 	<div class="top-stories-posts">
 		<?php foreach ($posts as $post): ?>
-			<div class="top-stories-post"><a class="nostyle" href="<?php echo $post['guid']; ?>">
+			<div class="top-stories-post">
 				<h3 class="top-stories-post-title"><?php echo $post['post_title']; ?></h3>
 				<div class="top-stories-post-timestamp"><?php echo \ace\Ace::date('M d, Y',\ace\Ace::strToTimeUTC($post['post_date_gmt'])); ?></div>
 				<a class="top-stories-post-link" href="<?php echo $post['guid']; ?>">Discover Story</a>
-			</a></div>
+				<a class="link-overlay" href="<?php echo $post['guid']; ?>"></a>
+			</div>
 		<?php endforeach; ?>
 	</div>
 </div>
