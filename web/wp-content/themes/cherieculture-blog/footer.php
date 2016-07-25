@@ -11,13 +11,15 @@
 
 ?>
 
-	</div><!-- #content -->
+	</div></div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer" role="contentinfo"><div class="page-content-wrap">
 		<div class="site-info">
-
+			&copy;<?php echo date('Y'); ?> Cherie Chic. All Rights Reserved.
+			<br />
+			<?php get_template_part('social-icons'); ?>
 		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	</div></footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

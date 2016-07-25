@@ -1,4 +1,5 @@
 <?php
+if (!defined('WEBROOT')) exit;
 
 /* These are publicized default values and will be overridden via config.local.php */
 
@@ -17,4 +18,20 @@ $WORDPRESS_AUTH_SALT = '';
 $WORDPRESS_SECURE_AUTH_SALT = '';
 $WORDPRESS_LOGGED_IN_SALT = '';
 $WORDPRESS_NONCE_SALT = '';
+
+
+$defaultTmz = 'America/Los_Angeles';
+
+$twitterAppKey = '';
+$twitterAppSecret = '';
+
+$awsAccessKey = '';
+$awsAccessSecret = '';
+$awsRegion = 'us-east-1';
+
+$googleAnalyticsId = '';
+
+
+$compile = array(
+);
 
