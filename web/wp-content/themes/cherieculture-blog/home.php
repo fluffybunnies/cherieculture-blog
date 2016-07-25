@@ -36,6 +36,9 @@ get_header(); ?>
 					<div class="clear">&nbsp;</div>
 				</div>
 				<div class="clear">&nbsp;</div>
+				<div class="home-stories-footer">
+					<a class="smhead-title smhead-title-exploremorestories" href="#">Explore More Stories</a>
+				</div>
 			</div>
 
 			<?php endif; ?>

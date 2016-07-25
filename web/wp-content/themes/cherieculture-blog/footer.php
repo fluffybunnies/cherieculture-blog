@@ -15,9 +15,16 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo"><div class="page-content-wrap">
 		<div class="site-info">
-			&copy;<?php echo date('Y'); ?> Cherie Chic. All Rights Reserved.
-			<br />
-			<?php get_template_part('social-icons'); ?>
+			<div class="footer-legal column small-12 medium-6">
+				&copy;<?php echo date('Y'); ?> Cherie Chic. All Rights Reserved.
+			</div>
+			<div class="footer-nav column small-12 medium-6">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</div>
+			<div class="clear">&nbsp;</div>
+			<div class="footer-social">
+				<?php get_template_part('social-icons'); ?>
+			</div>
 		</div><!-- .site-info -->
 	</div></footer><!-- #colophon -->
 </div><!-- #page -->
