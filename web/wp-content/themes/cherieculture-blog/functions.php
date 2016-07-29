@@ -43,9 +43,13 @@ function cherieculture_blog_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'cherieculture-blog' ),
-	) );
+	//register_nav_menus( array(
+	//	'primary' => esc_html__( 'Primary', 'cherieculture-blog' ),
+	//) );
+	register_nav_menus(array(
+		'primary-nav' => 'Primary Menu',
+		'footer-nav' => 'Footer Menu',
+	));
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments

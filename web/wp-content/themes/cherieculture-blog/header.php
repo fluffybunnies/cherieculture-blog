@@ -46,7 +46,7 @@
 				<!-- If small screen: show icon + dropdown for nav -->
 				<a href="#" class="main-navigation-toggle show-for-small-only" title="Show Menu"></a>
 				<div class="main-navigation-toggle-target show-for-medium">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary-nav', 'menu_id' => 'primary-menu' ) ); ?>
 				</div>
 			</nav><!-- #site-navigation -->
 

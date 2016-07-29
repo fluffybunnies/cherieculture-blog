@@ -19,7 +19,7 @@
 				&copy;<?php echo date('Y'); ?> Cherie Chic. All Rights Reserved.
 			</div>
 			<div class="footer-nav column small-12 medium-6">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'footer-nav', 'menu_id' => 'footer-menu' ) ); ?>
 			</div>
 			<div class="clear">&nbsp;</div>
 			<div class="footer-social">
