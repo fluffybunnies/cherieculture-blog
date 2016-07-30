@@ -178,7 +178,7 @@ div.clear {
 	max-width: 1218px;
 	margin: 0 auto;
 }
-.site-hero {
+.site-hero, .single-post .entry-header-image, .page .entry-header-image {
 	height: 36vw;
 	max-height: 450px;
 	background-repeat: no-repeat;
@@ -348,5 +348,16 @@ div.clear {
 	margin-top: 1rem;
 }
 
+
+/* BEGIN Post Page */
+.single-post .entry-header-image {
+}
+/* END Post Page */
+
+
+/* BEGIN Page Page */
+.page .entry-header-image {
+}
+/* END PAge Page */
 
 
