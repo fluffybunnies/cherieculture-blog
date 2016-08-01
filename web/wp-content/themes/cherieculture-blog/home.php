@@ -31,7 +31,7 @@ get_header(); ?>
 							$thumbImg = current(wp_get_attachment_image_src(get_post_thumbnail_id($post['ID']),array(367,357)));
 						}
 					?>
-						<?php echo "<script>console.log('".$post['post_title']."',".json_encode($post).")</script>"; ?>
+						<?php //echo "<script>console.log('".$post['post_title']."',".json_encode($post).")</script>"; ?>
 						<div class="home-stories-post column small-12 medium-6 large-4"><div class="home-stories-post-inner">
 							<img class="home-stories-post-image" src="/wp-content/themes/cherieculture-blog/images/blank-367x357.gif" style="background-image:url(<?php echo $thumbImg; ?>)" alt="" />
 							<div class="home-stories-post-timestamp"><?php echo \ace\Ace::date('M d, Y',\ace\Ace::strToTimeUTC($post['post_date_gmt'])); ?></div>
