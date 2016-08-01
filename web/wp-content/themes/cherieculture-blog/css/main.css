@@ -209,8 +209,8 @@ div.clear {
 }
 .site-title a {
 	display: inline-block;
-	background: url(../images/logo-header-0.png) no-repeat;
-	width: 253px;
+	background: url(../images/logo-header-1.png) no-repeat;
+	width: 248px;
 	height: 29px;
 	overflow: hidden;
 	white-space: nowrap;
@@ -293,7 +293,7 @@ div.clear {
 	height: 100%;
 	background: #f0f0f0;
 }
-.main-navigation-toggle-target.toggled-on li.page_item {
+.main-navigation-toggle-target.toggled-on li.menu-item {
 	display: block;
 	float: none;
 	width: auto;
@@ -301,13 +301,13 @@ div.clear {
 	padding: 0;
 	border-bottom: 1px solid #bfbfbf;
 }
-.main-navigation-toggle-target.toggled-on li.page_item a {
+.main-navigation-toggle-target.toggled-on li.menu-item a {
 	display: block;
 	padding: 0.7em;
 	background: #f0f0f0;
 	font-size: 14px;
 }
-.main-navigation-toggle-target.toggled-on li.page_item a:hover {
+.main-navigation-toggle-target.toggled-on li.menu-item a:hover {
 	background: #e8e8e8;
 }
 

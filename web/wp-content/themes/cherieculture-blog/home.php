@@ -25,10 +25,15 @@ get_header(); ?>
 					<div class="smhead-title smhead-title-lateststories">Latest Stories</div>
 				</div>
 				<div class="home-stories-posts columns">
-					<?php foreach ($posts as $post): ?>
-						<script>console.log("<?php echo $post['name']; ?>",<?php echo json_encode($post); ?>)</script>
+					<?php foreach ($posts as $post):
+						$thumbImg = '/wp-content/themes/cherieculture-blog/images/SAMPLE-article-thumb-0.jpg';
+						if (has_post_thumbnail($post['ID'])) {
+							$thumbImg = current(wp_get_attachment_image_src(get_post_thumbnail_id($post['ID']),array(367,357)));
+						}
+					?>
+						<?php echo "<script>console.log('".$post['post_title']."',".json_encode($post).")</script>"; ?>
 						<div class="home-stories-post column small-12 medium-6 large-4"><div class="home-stories-post-inner">
-							<img class="home-stories-post-image" src="/wp-content/themes/cherieculture-blog/images/blank-367x357.gif" style="background-image:url(/wp-content/themes/cherieculture-blog/images/SAMPLE-article-thumb-0.jpg)" alt="" />
+							<img class="home-stories-post-image" src="/wp-content/themes/cherieculture-blog/images/blank-367x357.gif" style="background-image:url(<?php echo $thumbImg; ?>)" alt="" />
 							<div class="home-stories-post-timestamp"><?php echo \ace\Ace::date('M d, Y',\ace\Ace::strToTimeUTC($post['post_date_gmt'])); ?></div>
 							<h3 class="home-stories-post-title"><?php echo $post['post_title']; ?></h3>
 							<a class="link-overlay" href="<?php echo $post['guid']; ?>"></a>
