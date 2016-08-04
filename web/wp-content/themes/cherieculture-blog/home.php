@@ -12,7 +12,6 @@ get_header(); ?>
 
 			<?php get_template_part('top-stories'); ?>
 
-
 			<?php
 			$showNumPosts = 9;
 			$posts = wp_get_recent_posts(array(
