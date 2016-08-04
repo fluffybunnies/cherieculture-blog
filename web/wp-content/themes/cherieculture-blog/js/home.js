@@ -59,7 +59,7 @@
 			$timestamp = $post.find('[x-showmore-key="timestamp"]')
 			$timestamp.text(chic.util.formatWpTimestamp(post.date_gmt,$timestamp.attr('x-showmore-format')))
 			// link
-			$post.find('[x-showmore-key="link"]').attr('href',post.guid&&post.guid.rendered)
+			$post.find('[x-showmore-key="link"]').attr('href',post.link)
 			// image
 			$img = $post.find('[x-showmore-key="image"]')
 			if ($img[0] && post.featured_media) {

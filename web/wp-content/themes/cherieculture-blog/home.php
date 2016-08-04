@@ -26,6 +26,7 @@ get_header(); ?>
 				</div>
 				<div id="show-more-posts-here" class="home-stories-posts columns">
 					<?php foreach ($posts as $post):
+						$link = get_permalink($post['ID']);
 						//$thumbImg = '/wp-content/themes/cherieculture-blog/images/SAMPLE-article-thumb-0.jpg';
 						$thumbImg = '/wp-content/themes/cherieculture-blog/images/blank.gif';
 						if (has_post_thumbnail($post['ID'])) {
@@ -37,7 +38,7 @@ get_header(); ?>
 							<img x-showmore-key="image" x-showmore-type="background" x-showmore-size="medium_large" class="home-stories-post-image" src="/wp-content/themes/cherieculture-blog/images/blank-367x357.gif" style="background-image:url(<?php echo $thumbImg; ?>)" alt="" />
 							<div x-showmore-key="timestamp" x-showmore-format="M d, Y" class="home-stories-post-timestamp"><?php echo \ace\Ace::date('M d, Y',\ace\Ace::strToTimeUTC($post['post_date_gmt'])); ?></div>
 							<h3 x-showmore-key="title" class="home-stories-post-title"><?php echo htmlentities($post['post_title']); ?></h3>
-							<a x-showmore-key="link" class="link-overlay" href="<?php echo $post['guid']; ?>"></a>
+							<a x-showmore-key="link" class="link-overlay" href="<?php echo $link; ?>"></a>
 						</div></div>
 					<?php endforeach; ?>
 					<div class="clear">&nbsp;</div>

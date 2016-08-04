@@ -10,12 +10,12 @@ if (isset($posts[0])): ?>
 		<?php get_template_part('social-icons'); ?>
 	</div>
 	<div class="top-stories-posts">
-		<?php foreach ($posts as $post): ?>
+		<?php foreach ($posts as $post): $link = get_permalink($post['ID']); ?>
 			<div class="top-stories-post">
 				<h3 class="top-stories-post-title"><?php echo htmlentities($post['post_title']); ?></h3>
 				<div class="top-stories-post-timestamp"><?php echo \ace\Ace::date('M d, Y',\ace\Ace::strToTimeUTC($post['post_date_gmt'])); ?></div>
-				<a class="top-stories-post-link" href="<?php echo $post['guid']; ?>">Discover Story</a>
-				<a class="link-overlay" href="<?php echo $post['guid']; ?>"></a>
+				<a class="top-stories-post-link" href="<?php echo $link; ?>">Discover Story</a>
+				<a class="link-overlay" href="<?php echo $link; ?>"></a>
 			</div>
 			<?php
 				// hack to put first post's featured image in .site-hero
