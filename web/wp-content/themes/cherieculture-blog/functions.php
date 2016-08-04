@@ -108,8 +108,12 @@ add_action( 'widgets_init', 'cherieculture_blog_widgets_init' );
 function cherieculture_blog_scripts() {
 	wp_enqueue_style( 'cherieculture-blog-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'cherieculture-blog-chic', get_template_directory_uri() . '/js/chic.js', array(), '', true );
 	//wp_enqueue_script( 'cherieculture-blog-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'cherieculture-blog-navigation', get_template_directory_uri() . '/js/nav.js', array(), '', true );
+	if (is_home()) {
+		wp_enqueue_script( 'cherieculture-blog-page-home', get_template_directory_uri() . '/js/home.js', array(), '', true );
+	}
 
 	wp_enqueue_script( 'cherieculture-blog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
