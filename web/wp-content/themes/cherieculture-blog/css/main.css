@@ -169,6 +169,11 @@ div.clear {
 		padding-bottom: 1.2rem;
 	}
 }
+/*
+@media (max-width: 900px) { .home-stories-post-title { font-size: 3vw; } }
+@media (max-width: 600px) { .home-stories-post-title { font-size: 3.5vw; } }
+@media (max-width: 300px) { .home-stories-post-title { font-size: 4vw; } }
+*/
 
 
 .site-header,.site-content,.site-footer {
