@@ -67,13 +67,10 @@
 			$post.find('[x-showmore-key="link"]').attr('href',post.link)
 			// image
 			$img = $post.find('[x-showmore-key="image"]')
-			if ($img[0] && post.featured_media) {
-				chic.req('media/'+post.featured_media,function(err,data){
-					if (err) {
-						return console.error('ShowMoreStories','fetch media',err)
-					}
-					var size = $img.attr('x-showmore-size') || 'medium_large'
-						,src = data.media_details.sizes[size].source_url
+			if ($img[0]) {
+				z.getPostThumb(post, $img.attr('x-showmore-size')||'medium_large', function(err,src){
+					if (err) return console.error('ShowMoreStories','getPostThumb()',err)
+					if (!src) return;
 					if ($img.attr('x-showmore-type') == 'background') {
 						$img.css('background-image','url('+src+')')
 					} else {
@@ -85,6 +82,28 @@
 			z.$postToCopy.after($post)
 			z.$postToCopy = $post
 			return $post
+		}
+		,getPostThumb: function(post,targetSize,cb){
+			console.log('POST',post)
+			var z = this
+				,altThumbImg = z.parseAlternateThumbImage(post.content&&post.content.rendered)
+			if (altThumbImg)
+				return setTimeout(function(){
+					cb(false,altThumbImg)
+				})
+			if (!post.featured_media)
+				return setTimeout(cb,0)
+			chic.req('media/'+post.featured_media,function(err,data){
+				if (err) return cb(err)
+				if (!data && data.media_details && data.media_details.sizes && data.media_details.sizes[targetSize] && data.media_details.sizes[targetSize].source_url) return cb('unable to find targetSize source url in api response')
+				cb(false,data.media_details.sizes[targetSize].source_url)
+			})
+		}
+		,parseAlternateThumbImage: function(postBody){
+			// #secondaryFeaturedImage
+			if (typeof postBody != 'string') return null
+			var match = postBody.match(/<img.+?alignsecondary_attachment-teaser.+?src="([^"]+)"/)
+			return match ? match[1] : null
 		}
 	}
 
