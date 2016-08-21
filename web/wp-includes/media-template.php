@@ -621,6 +621,10 @@ function wp_print_media_templates() {
 					<option value="none" selected>
 						<?php esc_attr_e('None'); ?>
 					</option>
+					<!-- #secondaryFeaturedImage -->
+					<option value="secondary_attachment-teaser">
+						<?php esc_attr_e('Secondary Attachment - Teaser'); ?>
+					</option>
 				</select>
 			</label>
 		<# } #>
@@ -917,6 +921,10 @@ function wp_print_media_templates() {
 							</button>
 							<button class="button active" value="none">
 								<?php esc_attr_e('None'); ?>
+							</button>
+							<!-- #secondaryFeaturedImage -->
+							<button class="button" value="secondary_attachment-teaser">
+								<?php esc_attr_e('Secondary Attachment - Teaser'); ?>
 							</button>
 						</div>
 					</div>

@@ -57,6 +57,13 @@ div.clear {
 .social-link-01-pinterest { background-position: -111px 0; }
 .social-link-01-email { background-position: -148px 0; }
 
+
+/* #secondaryFeaturedImage */
+.alignsecondary_attachment-teaser {
+	display: none !important;
+}
+
+
 .smhead-title {
 	display: inline-block;
 	padding: 0.3em 0;

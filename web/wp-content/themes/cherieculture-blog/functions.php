@@ -149,3 +149,14 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+// #secondaryFeaturedImage
+function parseAlternateThumbImage($postBody){
+	if (!is_string($postBody)) return null;
+	$match = array();
+	preg_match('/<img.+?alignsecondary_attachment-teaser.+?src="([^"]+)"/', $postBody, $match);
+	return $match ? $match[1] : null;
+}
+
+
